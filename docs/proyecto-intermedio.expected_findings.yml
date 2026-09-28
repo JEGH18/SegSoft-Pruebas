@@ -1,0 +1,30 @@
+# Hallazgos esperados al analizar ProyectoPruebas/proyecto-intermedio con TODAS las
+# políticas activas seleccionadas. Generado ejecutando el motor real
+# (/internal/execute-rule) con fixtures/rules_snapshot.json.
+# Total: 5 hallazgos (todos MEDIUM) en 24 archivos. line: null = CONFIG_CHECK (archivo completo).
+findings:
+  - file: backend/src/main/java/co/tienda/order/OrderController.java
+    line: 27
+    category: SQL_INJECTION
+    severity: MEDIUM
+    rule_id: c32419fe-bf48-4176-aa72-cea341e51d89
+  - file: backend/src/main/java/co/tienda/user/UserRepository.java
+    line: 19
+    category: SQL_INJECTION
+    severity: MEDIUM
+    rule_id: c32419fe-bf48-4176-aa72-cea341e51d89
+  - file: backend/src/main/resources/application.yml
+    line: null
+    category: DEPENDENCY_VULNERABILITY
+    severity: MEDIUM
+    rule_id: 56b639db-8c92-46f7-b7e2-0d01da20d992
+  - file: backend/src/main/resources/application.yml
+    line: null
+    category: XSS
+    severity: MEDIUM
+    rule_id: b67e8a2f-bec6-4425-80da-94af184eebd1
+  - file: reportes/reportes/db.py
+    line: 6
+    category: SQL_INJECTION
+    severity: MEDIUM
+    rule_id: c32419fe-bf48-4176-aa72-cea341e51d89

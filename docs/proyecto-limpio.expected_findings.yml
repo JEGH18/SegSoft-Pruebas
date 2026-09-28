@@ -1,0 +1,5 @@
+# Hallazgos esperados al analizar ProyectoPruebas/proyecto-limpio con TODAS las
+# políticas activas seleccionadas. Generado ejecutando el motor real
+# (/internal/execute-rule) con fixtures/rules_snapshot.json.
+# Total: 0 hallazgos en 31 archivos. Todas las políticas deben quedar COMPLIANT.
+findings: []

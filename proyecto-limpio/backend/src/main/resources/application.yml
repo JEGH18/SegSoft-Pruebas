@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: tienda-backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-store: ${SSL_KEYSTORE_PATH}
+    key-store-password: ${SSL_KEYSTORE_PASSWORD}
+    key-store-type: PKCS12
+
+jwt:
+  signing-key: ${JWT_SIGNING_KEY}
+
+payment:
+  encryption-key: ${CARD_ENCRYPTION_KEY}
+
+mfa:
+  required:
+    roles: ADMIN
+
+auth:
+  lockout:
+    max-attempts: 5
+    duration-minutes: 15
+
+security:
+  headers:
+    content-security-policy: "default-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+
+artifact:
+  checksum:
+    verify: true
+
+dependency:
+  update:
+    maxAgeDays: 30
+
+resilience4j:
+  ratelimiter:
+    instances:
+      auth:
+        limit-for-period: 20
+        limit-refresh-period: 1m
+        timeout-duration: 0
+
+logging:
+  level:
+    root: INFO
