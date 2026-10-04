@@ -541,12 +541,12 @@
       }
     },
     "automationDetails" : {
-      "id" : "pdg-segsoft/acaf454c-2287-4b5c-84a2-a2e076a9ae8b"
+      "id" : "pdg-segsoft/c790c29b-dfa1-42fb-9d24-ec90404a0219"
     },
     "invocations" : [ {
       "executionSuccessful" : true,
-      "startTimeUtc" : "2026-10-04T22:50:14.510778Z",
-      "endTimeUtc" : "2026-10-04T22:50:21.013127Z",
+      "startTimeUtc" : "2026-10-04T22:51:37.719778Z",
+      "endTimeUtc" : "2026-10-04T22:51:43.340330Z",
       "properties" : {
         "rulesExecuted" : 24,
         "rulesTotal" : 24,
@@ -554,6 +554,36 @@
       }
     } ],
     "results" : [ {
+      "ruleId" : "4dfdcfb9-2138-41d6-8e3d-14d4e378939e",
+      "ruleIndex" : 18,
+      "level" : "error",
+      "message" : {
+        "text" : "Consulta SQL construida con f-string en vez de parámetros vinculados. Política incumplida: «Validación de entradas antes de construir consultas SQL». Acción sugerida: Usa parámetros vinculados en vez de f-strings: cursor.execute(\"SELECT * FROM users WHERE id = %s\", (user_id,)) en lugar de cursor.execute(f\"SELECT * FROM users WHERE id = {user_id}\")."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-limpio/reportes/reportes/db.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 20,
+            "snippet" : {
+              "text" : "cursor.execute(f\"SELECT * FROM orders WHERE status = '{estado}'\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "40998f1f-304d-4e41-b558-bbc20e743565",
+        "severity" : "CRITICAL",
+        "category" : "SQL_INJECTION",
+        "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
+        "policyName" : "Validación de entradas antes de construir consultas SQL",
+        "cweId" : "CWE-89",
+        "fileSha256" : "b34c554398fc8b63429b7366970cced74853ae5cbe019a71afccbd37569109d3"
+      }
+    }, {
       "ruleId" : "bd7e6a9c-dc99-4a9b-b254-93f307164661",
       "ruleIndex" : 7,
       "level" : "error",
@@ -569,7 +599,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "06496b00-21ce-47ca-bb57-59ca5e332219",
+        "findingId" : "70d6a23f-0ef2-41d5-98d2-3bb2f95eacff",
         "severity" : "CRITICAL",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "33785a46-0191-4503-8ea9-79103c9f031a",
@@ -593,7 +623,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "5afdc09c-dba1-41da-8305-5a64364d5745",
+        "findingId" : "56ed84fd-e481-4226-bbca-04eec98fbc69",
         "severity" : "CRITICAL",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "33785a46-0191-4503-8ea9-79103c9f031a",
@@ -623,7 +653,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "4c5cac5a-abea-4b2b-8bb3-07c5f25a5a65",
+        "findingId" : "b8d4739f-28cc-42b7-a496-c6b5033c83c4",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
@@ -653,7 +683,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "ee054b0e-8224-4375-8c15-d635666ccbdf",
+        "findingId" : "faacadc6-0e2c-40ce-91ae-448aac74e991",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
@@ -683,7 +713,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "48bec65b-e7ad-403d-b591-820a39a7b6ae",
+        "findingId" : "d5762d61-9c3a-4bb7-b9a2-27feb393bb32",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
@@ -713,7 +743,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "dac00091-0d25-440f-bda8-cde439ae566a",
+        "findingId" : "7698a902-f5f0-465b-8b13-09dd1dfa5649",
         "severity" : "CRITICAL",
         "category" : "AUTHENTICATION_FAILURE",
         "policyId" : "6391bd7f-d57b-4170-93b1-5977255a0e51",
@@ -743,7 +773,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "ca7ce4db-7cd1-4dbf-a4ab-f3681cb1ec1c",
+        "findingId" : "ef803db8-abe1-45ca-b06b-ecd8d70cfec7",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "65fdc83a-bf7b-41cb-a230-30ba34bff6af",
@@ -773,7 +803,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "e34a301a-6775-4f36-b612-ffbbe2615119",
+        "findingId" : "3794a248-8051-4588-9cfb-f755010f26e7",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "65fdc83a-bf7b-41cb-a230-30ba34bff6af",
@@ -803,7 +833,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "5d1d7954-0091-4ea6-a919-90b1003b617b",
+        "findingId" : "9867d31f-cf5f-4732-acbb-e76325da3fd5",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
@@ -827,7 +857,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "bf5c8808-da27-4f9b-9291-aee200c06f2b",
+        "findingId" : "15538062-60ad-47dd-81ba-4663e7ab453c",
         "severity" : "CRITICAL",
         "category" : "AUTHENTICATION_FAILURE",
         "policyId" : "10a8f50a-7b2d-48ed-b441-42813fc70968",
@@ -851,7 +881,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "66f7b837-5968-48c9-9c3d-6b3505d386f9",
+        "findingId" : "e98a4b52-af2e-4e9f-ab31-35709e81e15e",
         "severity" : "CRITICAL",
         "category" : "AUTHENTICATION_FAILURE",
         "policyId" : "10a8f50a-7b2d-48ed-b441-42813fc70968",
@@ -881,7 +911,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "2b8ee058-acaf-4c2f-a5e9-0e654e1cf7d0",
+        "findingId" : "581166c4-e6d1-4121-8d80-6d30c1c45bc4",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
@@ -911,7 +941,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "db564be6-8f56-4eb9-8037-3d800a1af320",
+        "findingId" : "20cf808d-ae2b-4674-8676-5d4b78043b19",
         "severity" : "CRITICAL",
         "category" : "AUTHENTICATION_FAILURE",
         "policyId" : "6bf620d7-67e6-4898-9960-8490aae6d0a0",
@@ -941,7 +971,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "d679d83c-462b-49b8-b8d2-471a4b0f7494",
+        "findingId" : "5670670e-61eb-4fdb-8a8a-df06b8e6261e",
         "severity" : "CRITICAL",
         "category" : "SQL_INJECTION",
         "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
@@ -971,7 +1001,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "c2c098c7-42f5-4e1a-8ec2-86ad27d3ba50",
+        "findingId" : "948b7308-f1b3-4fbf-987c-e435f8772955",
         "severity" : "CRITICAL",
         "category" : "SQL_INJECTION",
         "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
@@ -1001,7 +1031,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "f52dd17f-b902-4483-9c24-61a90ef9e1ff",
+        "findingId" : "1939dc9d-502e-49ad-933f-85be0b6769fc",
         "severity" : "CRITICAL",
         "category" : "SQL_INJECTION",
         "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
@@ -1031,7 +1061,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "e40fed94-542c-438f-a598-4e88ca92c2af",
+        "findingId" : "df7b3b65-4b9f-47c5-a2b9-1a39b8fe3b9d",
         "severity" : "CRITICAL",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
@@ -1055,7 +1085,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "5fecb9f9-8264-45a0-9b4d-f64c96cdae1d",
+        "findingId" : "d76523b5-86bb-498a-a75d-13a3f59e76e4",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
@@ -1079,7 +1109,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "f767437c-a658-4dcb-8d4e-35c6fde35a52",
+        "findingId" : "fca2f778-e2d6-4603-abae-d8d24885bc6a",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
@@ -1109,7 +1139,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "ae775c32-5c68-4a41-a47b-883ae3871120",
+        "findingId" : "6b8be222-742c-4bc3-9867-b1ef45206172",
         "severity" : "HIGH",
         "category" : "AUTHENTICATION_FAILURE",
         "policyId" : "93a672c0-e2e3-4680-869e-35f35af9c3d4",
@@ -1139,7 +1169,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "d6e96e7f-3d64-4342-bbc6-26b6cae4d7b2",
+        "findingId" : "5fa3f3b2-5b81-414b-b3e5-1f139ee132f0",
         "severity" : "HIGH",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "3cfcf2fe-649f-4063-adb9-4285ee4ab13d",
@@ -1169,7 +1199,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "fe5ff2f4-8ccc-4d74-97d3-654e220d1cad",
+        "findingId" : "583eaae3-404d-49ef-88aa-5ca5f4c01664",
         "severity" : "HIGH",
         "category" : "AUTHENTICATION_FAILURE",
         "policyId" : "3cd30237-f515-48a0-9cdd-ed8db16b6cdc",
@@ -1199,7 +1229,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "5f2c2882-4bd4-46aa-8762-91f75880cf8f",
+        "findingId" : "94b442b7-22da-406b-be0a-85599b5c3efe",
         "severity" : "HIGH",
         "category" : "SQL_INJECTION",
         "policyId" : "e88bc42f-ad29-4df4-af91-262439409975",
@@ -1223,7 +1253,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "42a2b97d-56d9-4044-94b5-ca571122115f",
+        "findingId" : "f2ee5a43-17be-43ed-b5b6-c2070f66eed5",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "a6526797-247f-4fe3-85df-8a87828fd74e",
@@ -1247,7 +1277,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "24171d5e-7436-44d3-8de4-6ee699beda21",
+        "findingId" : "7be14faf-d32d-4e5e-aa8f-ec18290dccd2",
         "severity" : "HIGH",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "14de94c7-b91b-45f4-92d4-460196e73648",
@@ -1271,7 +1301,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "a9f866ae-4b75-4aa5-afe0-704bbe1de72b",
+        "findingId" : "7afcb7a3-3ace-4570-b8ef-2b326212c820",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "a6526797-247f-4fe3-85df-8a87828fd74e",
@@ -1295,7 +1325,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "c25b101d-1097-45fe-854e-ab3fe50d2f43",
+        "findingId" : "5277b4ce-8ae6-4dfe-a232-b8e180149ffd",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
@@ -1319,7 +1349,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "c9d306cc-1482-4924-b28f-fdf0530c5aef",
+        "findingId" : "a9e0aced-faab-4ec5-8580-c71c66d6979a",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
@@ -1349,7 +1379,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "c4c38161-ebb0-4c3e-bd02-566f595315e5",
+        "findingId" : "89af6349-8099-4c03-b306-4131fac68f37",
         "severity" : "HIGH",
         "category" : "XSS",
         "policyId" : "97461bf8-5cde-46f4-bda8-ae1a8d5af276",
@@ -1379,7 +1409,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "3b1b0125-fd48-4270-9c65-09c50e529a85",
+        "findingId" : "b41b001d-e3fd-47ca-b583-d491ced5ebdb",
         "severity" : "HIGH",
         "category" : "XSS",
         "policyId" : "a0ce20f9-4826-4b15-be53-4292ee1d148c",
@@ -1409,7 +1439,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "be4bbc80-d333-414b-ad4f-1de5f877911b",
+        "findingId" : "78fdcfe3-a4dd-4a19-9833-46958c80e912",
         "severity" : "HIGH",
         "category" : "XSS",
         "policyId" : "a0ce20f9-4826-4b15-be53-4292ee1d148c",
@@ -1439,7 +1469,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "d42d1954-7dd8-41da-b420-6524fdec1a91",
+        "findingId" : "a8552717-a335-4c20-84bc-5f84249cde04",
         "severity" : "HIGH",
         "category" : "INSECURE_DATA_HANDLING",
         "policyId" : "3cfcf2fe-649f-4063-adb9-4285ee4ab13d",
@@ -1469,7 +1499,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "c2b46a12-9c1b-44db-be13-f141c23bdf42",
+        "findingId" : "490730c5-d101-486c-a753-47ff46a63c7f",
         "severity" : "HIGH",
         "category" : "XSS",
         "policyId" : "9c235b88-1b55-422e-8dcf-8788607c7b85",
@@ -1493,7 +1523,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "4c0a6578-65ac-48b0-8487-140fc3f21bcf",
+        "findingId" : "021a16bb-11d8-4ee7-b441-d2c2fc92a023",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
@@ -1517,7 +1547,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "6e053b8e-e8bb-4ac1-8f80-2198902b485e",
+        "findingId" : "bfe74df1-4bb7-4b82-873a-9de4a4c1915f",
         "severity" : "HIGH",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
@@ -1547,7 +1577,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "590cec5e-400c-4f64-8b2a-7e240e87bb99",
+        "findingId" : "055383a4-21a9-4404-9ccd-05b617b83479",
         "severity" : "MEDIUM",
         "category" : "SQL_INJECTION",
         "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
@@ -1577,7 +1607,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "1313e0af-37d7-4c63-bde9-4591c7d453fc",
+        "findingId" : "e8346d79-eaa7-4d18-b076-c1bf12ceb430",
         "severity" : "MEDIUM",
         "category" : "SQL_INJECTION",
         "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
@@ -1601,7 +1631,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "ae011d5a-8152-4b63-ac67-7f2aff78b343",
+        "findingId" : "cb9d345c-4013-426a-b307-53e8c2631cc4",
         "severity" : "MEDIUM",
         "category" : "XSS",
         "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
@@ -1625,7 +1655,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "4b3ae32d-9de5-43d7-9ab0-daa3ca8231ea",
+        "findingId" : "73939bd8-ae3c-4eed-be06-b6f4c57ca1b7",
         "severity" : "MEDIUM",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
@@ -1655,13 +1685,43 @@
         }
       } ],
       "properties" : {
-        "findingId" : "cafd5886-22dd-4edf-99c9-7fb851d163bc",
+        "findingId" : "4c623de5-147a-4123-9c9e-1e2b0a41602b",
         "severity" : "MEDIUM",
         "category" : "SQL_INJECTION",
         "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
         "policyName" : "Control de acceso a datos por rol",
         "cweId" : "CWE-89",
         "fileSha256" : "7daeb4a4e3d7042d3e2018e0b08d3cc606a3309d955db3d60e00c8db167f529d"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-limpio/reportes/reportes/db.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 20,
+            "snippet" : {
+              "text" : "cursor.execute(f\"SELECT * FROM orders WHERE status = '{estado}'\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "f7808cd6-ac3d-48f3-b0fb-ab8e7f225e19",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "b34c554398fc8b63429b7366970cced74853ae5cbe019a71afccbd37569109d3"
       }
     }, {
       "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
@@ -1685,7 +1745,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "09fe3a15-6a74-4f13-b5f0-5c4a9356b6dc",
+        "findingId" : "801aaf9a-9de0-4aeb-b57c-aa498bcc7a2b",
         "severity" : "MEDIUM",
         "category" : "SQL_INJECTION",
         "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
@@ -1715,7 +1775,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "20dd34f0-aef6-48fd-ad68-f93874596b3b",
+        "findingId" : "4b8d6315-4c6d-4180-a9bd-3056aab9b630",
         "severity" : "MEDIUM",
         "category" : "SQL_INJECTION",
         "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
@@ -1739,7 +1799,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "345c91b1-c15f-464c-ad6a-4df654def0c4",
+        "findingId" : "0cdacced-b2fc-4668-8abe-5be77e4b96f8",
         "severity" : "MEDIUM",
         "category" : "XSS",
         "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
@@ -1763,7 +1823,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "0a3cd6f5-4235-4274-bc42-8997325960ba",
+        "findingId" : "8adedb73-31de-41bd-b916-4847cccc0a48",
         "severity" : "MEDIUM",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
@@ -1787,7 +1847,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "7cfc9c9f-bec1-440d-aba7-fa0c760d5e10",
+        "findingId" : "6083814c-8dd5-4ec5-82c4-9a5615681a4b",
         "severity" : "MEDIUM",
         "category" : "XSS",
         "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
@@ -1811,7 +1871,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "96308b78-577e-41b4-898e-48100d095c34",
+        "findingId" : "54bfb932-6d0b-4cb6-b0f4-37f53796d45a",
         "severity" : "MEDIUM",
         "category" : "DEPENDENCY_VULNERABILITY",
         "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
@@ -1841,7 +1901,7 @@
         }
       } ],
       "properties" : {
-        "findingId" : "9488d846-95fe-4af4-89f6-bed1a348cd12",
+        "findingId" : "c33fc7cf-7fef-4c4e-bb7d-29891799821e",
         "severity" : "MEDIUM",
         "category" : "SQL_INJECTION",
         "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
@@ -1851,16 +1911,16 @@
       }
     } ],
     "properties" : {
-      "reportId" : "acaf454c-2287-4b5c-84a2-a2e076a9ae8b",
+      "reportId" : "c790c29b-dfa1-42fb-9d24-ec90404a0219",
       "reportStatus" : "GENERATED",
-      "reportChecksum" : "b242f4da0286725a6b00e27fa5a7d69c964e719b92ae4f1bc80d45d78579fda7",
-      "reportGeneratedAt" : "2026-10-04T22:50:21.578Z",
-      "analysisId" : "d03831e5-dd5f-4ca2-a339-5b5d2e4de9a0",
+      "reportChecksum" : "6df94a45c98962269c32335f2d11b0e1a2bfb952b97ccbee18a6e6681f373d02",
+      "reportGeneratedAt" : "2026-10-04T22:51:43.761Z",
+      "analysisId" : "e50078f1-ec96-43c3-9c20-2d63e2b9defc",
       "repositoryName" : "repo.zip",
       "compliancePercentage" : 8.70,
       "weightedCompliancePercentage" : 8.85,
       "policiesEvaluated" : 23,
-      "totalFindings" : 47
+      "totalFindings" : 49
     }
   } ]
 }
