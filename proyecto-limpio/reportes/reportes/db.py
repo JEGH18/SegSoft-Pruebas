@@ -11,3 +11,11 @@ def ventas_por_rango(desde: str, hasta: str) -> list:
     with connection.cursor() as cursor:
         cursor.execute("SELECT id, total FROM orders WHERE created_at BETWEEN %s AND %s", [desde, hasta])
         return cursor.fetchall()
+
+
+def ventas_por_estado(estado: str) -> list:
+    # PRUEBA SegSoft: inyección SQL introducida a propósito para verificar las
+    # anotaciones de GitHub Code Scanning en un PR. No mergear.
+    with connection.cursor() as cursor:
+        cursor.execute(f"SELECT * FROM orders WHERE status = '{estado}'")
+        return cursor.fetchall()
