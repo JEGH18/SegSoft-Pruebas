@@ -1,0 +1,28 @@
+# Sube a GitHub Code Scanning el SARIF exportado por SegSoft
+# (GET /api/v1/reports/{id}/export?format=sarif).
+#
+# SegSoft corre fuera de GitHub, así que el SARIF se genera allí y se
+# versiona en .segsoft/segsoft.sarif; este workflow solo lo publica. La
+# integración completa (analizar y exportar desde el pipeline) está en
+# segsoft-docs/sarif-mapping.md.
+name: SegSoft code scanning
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  upload-sarif:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Subir SARIF de SegSoft a Code Scanning
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: .segsoft/segsoft.sarif

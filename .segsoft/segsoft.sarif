@@ -1,0 +1,1866 @@
+{
+  "$schema" : "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "PDG-SegSoft",
+        "version" : "0.1.0",
+        "semanticVersion" : "0.1.0",
+        "informationUri" : "https://github.com/JEGH18/segsoft-backend",
+        "organization" : "Universidad Icesi",
+        "rules" : [ {
+          "id" : "3fd049c7-74d7-438a-bac7-aebe68f58ba7",
+          "name" : "MfaObligatorioParaRolesPrivilegiados",
+          "shortDescription" : {
+            "text" : "MFA obligatorio para roles privilegiados"
+          },
+          "fullDescription" : {
+            "text" : "MFA obligatorio para roles privilegiados. Política: «Autenticación multifactor para roles privilegiados». Categoría: AUTHENTICATION_FAILURE. CWE-308."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/308.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "authentication-failure", "external/cwe/cwe-308" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "AUTHENTICATION_FAILURE",
+            "ruleType" : "CONFIG_CHECK",
+            "policyId" : "10a8f50a-7b2d-48ed-b441-42813fc70968",
+            "policyName" : "Autenticación multifactor para roles privilegiados"
+          }
+        }, {
+          "id" : "f9c3bb14-c1bd-45f6-9cae-34ea14f6ccd5",
+          "name" : "EndpointDeLoginSinProteccionDeRateLimitingVisible",
+          "shortDescription" : {
+            "text" : "Endpoint de login sin protección de rate limiting visible"
+          },
+          "fullDescription" : {
+            "text" : "Endpoint de login sin protección de rate limiting visible. Política: «Bloqueo de cuenta tras intentos fallidos». Categoría: AUTHENTICATION_FAILURE. CWE-307."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/307.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "authentication-failure", "external/cwe/cwe-307" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "AUTHENTICATION_FAILURE",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "93a672c0-e2e3-4680-869e-35f35af9c3d4",
+            "policyName" : "Bloqueo de cuenta tras intentos fallidos"
+          }
+        }, {
+          "id" : "890b0744-34e4-4ba4-bb7b-65d8b7d481d1",
+          "name" : "HashDePropositoGeneralMd5Sha1AplicadoAUnaContrasena",
+          "shortDescription" : {
+            "text" : "Hash de propósito general (MD5/SHA-1) aplicado a una contraseña"
+          },
+          "fullDescription" : {
+            "text" : "Hash de propósito general (MD5/SHA-1) aplicado a una contraseña. Política: «Gestión segura de credenciales de autenticación». Categoría: AUTHENTICATION_FAILURE. CWE-916."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/916.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "authentication-failure", "external/cwe/cwe-916" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "AUTHENTICATION_FAILURE",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "6bf620d7-67e6-4898-9960-8490aae6d0a0",
+            "policyName" : "Gestión segura de credenciales de autenticación"
+          }
+        }, {
+          "id" : "2aae5e3e-8caa-426e-a9ad-d60c822357f4",
+          "name" : "ValidacionDeContrasenaConLongitudMenorA12Caracteres",
+          "shortDescription" : {
+            "text" : "Validación de contraseña con longitud menor a 12 caracteres"
+          },
+          "fullDescription" : {
+            "text" : "Validación de contraseña con longitud menor a 12 caracteres. Política: «Política de contraseñas seguras». Categoría: AUTHENTICATION_FAILURE. CWE-521."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/521.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "authentication-failure", "external/cwe/cwe-521" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "AUTHENTICATION_FAILURE",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "3cd30237-f515-48a0-9cdd-ed8db16b6cdc",
+            "policyName" : "Política de contraseñas seguras"
+          }
+        }, {
+          "id" : "11ab489f-a7fd-48b7-8a0f-036455429364",
+          "name" : "TokenJwtCreadoSinExpiracionExplicita",
+          "shortDescription" : {
+            "text" : "Token JWT creado sin expiración explícita"
+          },
+          "fullDescription" : {
+            "text" : "Token JWT creado sin expiración explícita. Política: «Tokens JWT con expiración y rotación». Categoría: AUTHENTICATION_FAILURE. CWE-613."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/613.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "authentication-failure", "external/cwe/cwe-613" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "AUTHENTICATION_FAILURE",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "6391bd7f-d57b-4170-93b1-5977255a0e51",
+            "policyName" : "Tokens JWT con expiración y rotación"
+          }
+        }, {
+          "id" : "2aff573a-12d9-49a2-b26a-a96e7ced8bf4",
+          "name" : "PoliticaDeActualizacionDeDependenciasAusente",
+          "shortDescription" : {
+            "text" : "Politica de actualizacion de dependencias ausente"
+          },
+          "fullDescription" : {
+            "text" : "Politica de actualizacion de dependencias ausente. Política: «Actualización periódica de dependencias». Categoría: DEPENDENCY_VULNERABILITY. CWE-1104."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/1104.html",
+          "defaultConfiguration" : {
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "security", "dependency-vulnerability", "external/cwe/cwe-1104" ],
+            "security-severity" : "5.5",
+            "severity" : "MEDIUM",
+            "category" : "DEPENDENCY_VULNERABILITY",
+            "ruleType" : "CONFIG_CHECK",
+            "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
+            "policyName" : "Actualización periódica de dependencias"
+          }
+        }, {
+          "id" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+          "name" : "DependenciasConCvesConocidosDeAltaSeveridad",
+          "shortDescription" : {
+            "text" : "Dependencias con CVEs conocidos de alta severidad"
+          },
+          "fullDescription" : {
+            "text" : "Dependencias con CVEs conocidos de alta severidad. Política: «Escaneo de dependencias en CI/CD». Categoría: DEPENDENCY_VULNERABILITY. CWE-1035."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/1035.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "dependency-vulnerability", "external/cwe/cwe-1035" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "DEPENDENCY_VULNERABILITY",
+            "ruleType" : "DEPENDENCY_CHECK",
+            "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+            "policyName" : "Escaneo de dependencias en CI/CD"
+          }
+        }, {
+          "id" : "bd7e6a9c-dc99-4a9b-b254-93f307164661",
+          "name" : "BloquearDependenciasConCveCriticalOHigh",
+          "shortDescription" : {
+            "text" : "Bloquear dependencias con CVE CRITICAL o HIGH"
+          },
+          "fullDescription" : {
+            "text" : "Bloquear dependencias con CVE CRITICAL o HIGH. Política: «Prohibición de dependencias con CVE crítico». Categoría: DEPENDENCY_VULNERABILITY. CWE-1035."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/1035.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "dependency-vulnerability", "external/cwe/cwe-1035" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "DEPENDENCY_VULNERABILITY",
+            "ruleType" : "DEPENDENCY_CHECK",
+            "policyId" : "33785a46-0191-4503-8ea9-79103c9f031a",
+            "policyName" : "Prohibición de dependencias con CVE crítico"
+          }
+        }, {
+          "id" : "37c9b9ba-006a-4553-a746-6c84219cfa88",
+          "name" : "EscaneoDeCvesEnDependenciasPythonDelProyecto",
+          "shortDescription" : {
+            "text" : "Escaneo de CVEs en dependencias Python del proyecto"
+          },
+          "fullDescription" : {
+            "text" : "Escaneo de CVEs en dependencias Python del proyecto. Política: «Remediación oportuna de vulnerabilidades en componentes». Categoría: DEPENDENCY_VULNERABILITY. CWE-1035."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/1035.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "dependency-vulnerability", "external/cwe/cwe-1035" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "DEPENDENCY_VULNERABILITY",
+            "ruleType" : "DEPENDENCY_CHECK",
+            "policyId" : "5d11ec97-cf0a-411b-8dd1-979c32d7e25b",
+            "policyName" : "Remediación oportuna de vulnerabilidades en componentes"
+          }
+        }, {
+          "id" : "fa8e1857-f65b-4e7f-88f1-a02235ce7ed8",
+          "name" : "VerificacionDeChecksumDeArtefactosAusente",
+          "shortDescription" : {
+            "text" : "Verificacion de checksum de artefactos ausente"
+          },
+          "fullDescription" : {
+            "text" : "Verificacion de checksum de artefactos ausente. Política: «Verificación de integridad de artefactos». Categoría: DEPENDENCY_VULNERABILITY. CWE-494."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/494.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "dependency-vulnerability", "external/cwe/cwe-494" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "DEPENDENCY_VULNERABILITY",
+            "ruleType" : "CONFIG_CHECK",
+            "policyId" : "a6526797-247f-4fe3-85df-8a87828fd74e",
+            "policyName" : "Verificación de integridad de artefactos"
+          }
+        }, {
+          "id" : "f7d8a3fe-4bc2-41f5-b10f-b10e0d4d30f9",
+          "name" : "CampoContrasenaAlmacenadoComoTextoPlanoSinConvertNiCifrado",
+          "shortDescription" : {
+            "text" : "Campo contraseña almacenado como texto plano sin @Convert ni cifrado"
+          },
+          "fullDescription" : {
+            "text" : "Campo contraseña almacenado como texto plano sin @Convert ni cifrado. Política: «Cifrado de datos sensibles en reposo». Categoría: INSECURE_DATA_HANDLING. CWE-312."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/312.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "insecure-data-handling", "external/cwe/cwe-312" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "INSECURE_DATA_HANDLING",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
+            "policyName" : "Cifrado de datos sensibles en reposo"
+          }
+        }, {
+          "id" : "5becf440-b792-419b-8eaf-9f5e02f826e6",
+          "name" : "SecretoHardcodeadoDetectadoEnCodigoFuente",
+          "shortDescription" : {
+            "text" : "Secreto hardcodeado detectado en código fuente"
+          },
+          "fullDescription" : {
+            "text" : "Secreto hardcodeado detectado en código fuente. Política: «No almacenar secretos en código fuente». Categoría: INSECURE_DATA_HANDLING. CWE-798."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/798.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "insecure-data-handling", "external/cwe/cwe-798" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "INSECURE_DATA_HANDLING",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
+            "policyName" : "No almacenar secretos en código fuente"
+          }
+        }, {
+          "id" : "6c843dc0-9e16-43e1-9830-4093b1df2b8d",
+          "name" : "DatosSensiblesRegistradosEnLogs",
+          "shortDescription" : {
+            "text" : "Datos sensibles registrados en logs"
+          },
+          "fullDescription" : {
+            "text" : "Datos sensibles registrados en logs. Política: «Registro seguro sin datos sensibles». Categoría: INSECURE_DATA_HANDLING. CWE-532."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/532.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "insecure-data-handling", "external/cwe/cwe-532" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "INSECURE_DATA_HANDLING",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "3cfcf2fe-649f-4063-adb9-4285ee4ab13d",
+            "policyName" : "Registro seguro sin datos sensibles"
+          }
+        }, {
+          "id" : "ff701ffd-e418-4ff5-8d3a-e55c0633a649",
+          "name" : "TlsDebeEstarHabilitadoEnProduccion",
+          "shortDescription" : {
+            "text" : "TLS debe estar habilitado en produccion"
+          },
+          "fullDescription" : {
+            "text" : "TLS debe estar habilitado en produccion. Política: «Transmisión cifrada con TLS 1.2+». Categoría: INSECURE_DATA_HANDLING. CWE-319."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/319.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "insecure-data-handling", "external/cwe/cwe-319" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "INSECURE_DATA_HANDLING",
+            "ruleType" : "CONFIG_CHECK",
+            "policyId" : "14de94c7-b91b-45f4-92d4-460196e73648",
+            "policyName" : "Transmisión cifrada con TLS 1.2+"
+          }
+        }, {
+          "id" : "35f2bf6b-e9a8-4523-a6e0-14eb8c7a8f65",
+          "name" : "AlgoritmoOModoDeCifradoDebilDesOEcb",
+          "shortDescription" : {
+            "text" : "Algoritmo o modo de cifrado débil (DES o ECB)"
+          },
+          "fullDescription" : {
+            "text" : "Algoritmo o modo de cifrado débil (DES o ECB). Política: «Uso de algoritmos criptográficos aprobados». Categoría: INSECURE_DATA_HANDLING. CWE-327."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/327.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "insecure-data-handling", "external/cwe/cwe-327" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "INSECURE_DATA_HANDLING",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "65fdc83a-bf7b-41cb-a230-30ba34bff6af",
+            "policyName" : "Uso de algoritmos criptográficos aprobados"
+          }
+        }, {
+          "id" : "e5fa9237-6c71-4bd1-847c-894f43d07d90",
+          "name" : "AlgoritmoOModoDeCifradoDebilDesOEcb",
+          "shortDescription" : {
+            "text" : "Algoritmo o modo de cifrado débil (DES o ECB)"
+          },
+          "fullDescription" : {
+            "text" : "Algoritmo o modo de cifrado débil (DES o ECB). Política: «Uso de algoritmos criptográficos aprobados». Categoría: INSECURE_DATA_HANDLING. CWE-327."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/327.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "insecure-data-handling", "external/cwe/cwe-327" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "INSECURE_DATA_HANDLING",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "65fdc83a-bf7b-41cb-a230-30ba34bff6af",
+            "policyName" : "Uso de algoritmos criptográficos aprobados"
+          }
+        }, {
+          "id" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+          "name" : "ConsultaSelectSinFiltroDeColumnasSensibles",
+          "shortDescription" : {
+            "text" : "Consulta SELECT * sin filtro de columnas sensibles"
+          },
+          "fullDescription" : {
+            "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política: «Control de acceso a datos por rol». Categoría: SQL_INJECTION. CWE-89."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/89.html",
+          "defaultConfiguration" : {
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "security", "sql-injection", "external/cwe/cwe-89" ],
+            "security-severity" : "5.5",
+            "severity" : "MEDIUM",
+            "category" : "SQL_INJECTION",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+            "policyName" : "Control de acceso a datos por rol"
+          }
+        }, {
+          "id" : "5973f1fb-a7d1-4b38-af99-b275b0dfc102",
+          "name" : "ConcatenacionDirectaDeCadenasEnQuerySql",
+          "shortDescription" : {
+            "text" : "Concatenación directa de cadenas en query SQL"
+          },
+          "fullDescription" : {
+            "text" : "Concatenación directa de cadenas en query SQL. Política: «Prevención de SQL Injection con consultas parametrizadas». Categoría: SQL_INJECTION. CWE-89."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/89.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "sql-injection", "external/cwe/cwe-89" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "SQL_INJECTION",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "ba957845-6e89-4b6f-9038-ea39bb19e2b2",
+            "policyName" : "Prevención de SQL Injection con consultas parametrizadas"
+          }
+        }, {
+          "id" : "4dfdcfb9-2138-41d6-8e3d-14d4e378939e",
+          "name" : "ConsultaSqlConstruidaConFStringEnVezDeParametrosVinculados",
+          "shortDescription" : {
+            "text" : "Consulta SQL construida con f-string en vez de parámetros vinculados"
+          },
+          "fullDescription" : {
+            "text" : "Consulta SQL construida con f-string en vez de parámetros vinculados. Política: «Validación de entradas antes de construir consultas SQL». Categoría: SQL_INJECTION. CWE-89."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/89.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "sql-injection", "external/cwe/cwe-89" ],
+            "security-severity" : "9.5",
+            "severity" : "CRITICAL",
+            "category" : "SQL_INJECTION",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
+            "policyName" : "Validación de entradas antes de construir consultas SQL"
+          }
+        }, {
+          "id" : "41109721-0f80-4b6c-ba18-9990352fc0ab",
+          "name" : "ParametroHttpUsadoDirectamenteEnQuerySinValidar",
+          "shortDescription" : {
+            "text" : "Parámetro HTTP usado directamente en query sin validar"
+          },
+          "fullDescription" : {
+            "text" : "Parámetro HTTP usado directamente en query sin validar. Política: «Validación de entradas en capa de acceso a datos». Categoría: SQL_INJECTION. CWE-20."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/20.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "sql-injection", "external/cwe/cwe-20" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "SQL_INJECTION",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "e88bc42f-ad29-4df4-af91-262439409975",
+            "policyName" : "Validación de entradas en capa de acceso a datos"
+          }
+        }, {
+          "id" : "0e7ae2b7-5549-4dbf-a0ca-7d4a092d3e9d",
+          "name" : "AsignacionDirectaAInnerhtmlSinEscape",
+          "shortDescription" : {
+            "text" : "Asignación directa a innerHTML sin escape"
+          },
+          "fullDescription" : {
+            "text" : "Asignación directa a innerHTML sin escape. Política: «Codificación de salida HTML». Categoría: XSS. CWE-79."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/79.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "xss", "external/cwe/cwe-79" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "XSS",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "a0ce20f9-4826-4b15-be53-4292ee1d148c",
+            "policyName" : "Codificación de salida HTML"
+          }
+        }, {
+          "id" : "7a8b57c4-b66e-4e06-b644-12362d6ebc77",
+          "name" : "CabeceraContentSecurityPolicyNoConfigurada",
+          "shortDescription" : {
+            "text" : "Cabecera Content-Security-Policy no configurada"
+          },
+          "fullDescription" : {
+            "text" : "Cabecera Content-Security-Policy no configurada. Política: «Content Security Policy obligatoria». Categoría: XSS. CWE-693."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/693.html",
+          "defaultConfiguration" : {
+            "level" : "warning"
+          },
+          "properties" : {
+            "tags" : [ "security", "xss", "external/cwe/cwe-693" ],
+            "security-severity" : "5.5",
+            "severity" : "MEDIUM",
+            "category" : "XSS",
+            "ruleType" : "CONFIG_CHECK",
+            "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
+            "policyName" : "Content Security Policy obligatoria"
+          }
+        }, {
+          "id" : "920c26d2-bb35-405f-8fc3-40d6fa4c3e17",
+          "name" : "RenderizadoHtmlSinSanitizacionExplicita",
+          "shortDescription" : {
+            "text" : "Renderizado HTML sin sanitización explícita"
+          },
+          "fullDescription" : {
+            "text" : "Renderizado HTML sin sanitización explícita. Política: «Sanitización de contenido generado por usuarios». Categoría: XSS. CWE-79."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/79.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "xss", "external/cwe/cwe-79" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "XSS",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "97461bf8-5cde-46f4-bda8-ae1a8d5af276",
+            "policyName" : "Sanitización de contenido generado por usuarios"
+          }
+        }, {
+          "id" : "7ea6e380-71c5-4353-ba73-ab1b1c78b7ff",
+          "name" : "ContenidoMarcadoComoSeguroMarkSafeSinSanitizacionPreviaVisible",
+          "shortDescription" : {
+            "text" : "Contenido marcado como seguro (mark_safe) sin sanitización previa visible"
+          },
+          "fullDescription" : {
+            "text" : "Contenido marcado como seguro (mark_safe) sin sanitización previa visible. Política: «Validación de entradas antes de renderizar contenido dinámico». Categoría: XSS. CWE-79."
+          },
+          "helpUri" : "https://cwe.mitre.org/data/definitions/79.html",
+          "defaultConfiguration" : {
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "security", "xss", "external/cwe/cwe-79" ],
+            "security-severity" : "8.0",
+            "severity" : "HIGH",
+            "category" : "XSS",
+            "ruleType" : "PATTERN_REGEX",
+            "policyId" : "9c235b88-1b55-422e-8dcf-8788607c7b85",
+            "policyName" : "Validación de entradas antes de renderizar contenido dinámico"
+          }
+        } ]
+      }
+    },
+    "automationDetails" : {
+      "id" : "pdg-segsoft/acaf454c-2287-4b5c-84a2-a2e076a9ae8b"
+    },
+    "invocations" : [ {
+      "executionSuccessful" : true,
+      "startTimeUtc" : "2026-10-04T22:50:14.510778Z",
+      "endTimeUtc" : "2026-10-04T22:50:21.013127Z",
+      "properties" : {
+        "rulesExecuted" : 24,
+        "rulesTotal" : 24,
+        "ruleExecutionErrors" : 0
+      }
+    } ],
+    "results" : [ {
+      "ruleId" : "bd7e6a9c-dc99-4a9b-b254-93f307164661",
+      "ruleIndex" : 7,
+      "level" : "error",
+      "message" : {
+        "text" : "Bloquear dependencias con CVE CRITICAL o HIGH. Política incumplida: «Prohibición de dependencias con CVE crítico»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/pom.xml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "06496b00-21ce-47ca-bb57-59ca5e332219",
+        "severity" : "CRITICAL",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "33785a46-0191-4503-8ea9-79103c9f031a",
+        "policyName" : "Prohibición de dependencias con CVE crítico",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "1dca6cc9d1c824c170fd3c7e7e2d65540712475a65bc5108825eee6137209bc1"
+      }
+    }, {
+      "ruleId" : "bd7e6a9c-dc99-4a9b-b254-93f307164661",
+      "ruleIndex" : 7,
+      "level" : "error",
+      "message" : {
+        "text" : "Bloquear dependencias con CVE CRITICAL o HIGH. Política incumplida: «Prohibición de dependencias con CVE crítico»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/pom.xml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "5afdc09c-dba1-41da-8305-5a64364d5745",
+        "severity" : "CRITICAL",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "33785a46-0191-4503-8ea9-79103c9f031a",
+        "policyName" : "Prohibición de dependencias con CVE crítico",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "1dca6cc9d1c824c170fd3c7e7e2d65540712475a65bc5108825eee6137209bc1"
+      }
+    }, {
+      "ruleId" : "f7d8a3fe-4bc2-41f5-b10f-b10e0d4d30f9",
+      "ruleIndex" : 10,
+      "level" : "error",
+      "message" : {
+        "text" : "Campo contraseña almacenado como texto plano sin @Convert ni cifrado. Política incumplida: «Cifrado de datos sensibles en reposo»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/AuthController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 29,
+            "snippet" : {
+              "text" : "String password = *****;"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "4c5cac5a-abea-4b2b-8bb3-07c5f25a5a65",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
+        "policyName" : "Cifrado de datos sensibles en reposo",
+        "cweId" : "CWE-312",
+        "fileSha256" : "53e3a5a4c414d5e653fe5d0c79dc74358780ce260dc46e99efa1c14a818bb1e5"
+      }
+    }, {
+      "ruleId" : "f7d8a3fe-4bc2-41f5-b10f-b10e0d4d30f9",
+      "ruleIndex" : 10,
+      "level" : "error",
+      "message" : {
+        "text" : "Campo contraseña almacenado como texto plano sin @Convert ni cifrado. Política incumplida: «Cifrado de datos sensibles en reposo»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/AuthController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 42,
+            "snippet" : {
+              "text" : "String password = *****;"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "ee054b0e-8224-4375-8c15-d635666ccbdf",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
+        "policyName" : "Cifrado de datos sensibles en reposo",
+        "cweId" : "CWE-312",
+        "fileSha256" : "53e3a5a4c414d5e653fe5d0c79dc74358780ce260dc46e99efa1c14a818bb1e5"
+      }
+    }, {
+      "ruleId" : "5becf440-b792-419b-8eaf-9f5e02f826e6",
+      "ruleIndex" : 11,
+      "level" : "error",
+      "message" : {
+        "text" : "Secreto hardcodeado detectado en código fuente. Política incumplida: «No almacenar secretos en código fuente»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/JwtService.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 10,
+            "snippet" : {
+              "text" : "private final String secret = *****;"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "48bec65b-e7ad-403d-b591-820a39a7b6ae",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
+        "policyName" : "No almacenar secretos en código fuente",
+        "cweId" : "CWE-798",
+        "fileSha256" : "1bf89067ae4def0ae613aedadff63584f9d24f4f1dfc8a0904854864de5f465f"
+      }
+    }, {
+      "ruleId" : "11ab489f-a7fd-48b7-8a0f-036455429364",
+      "ruleIndex" : 4,
+      "level" : "error",
+      "message" : {
+        "text" : "Token JWT creado sin expiración explícita. Política incumplida: «Tokens JWT con expiración y rotación»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/JwtService.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 13,
+            "snippet" : {
+              "text" : "return JWT.create()"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "dac00091-0d25-440f-bda8-cde439ae566a",
+        "severity" : "CRITICAL",
+        "category" : "AUTHENTICATION_FAILURE",
+        "policyId" : "6391bd7f-d57b-4170-93b1-5977255a0e51",
+        "policyName" : "Tokens JWT con expiración y rotación",
+        "cweId" : "CWE-613",
+        "fileSha256" : "1bf89067ae4def0ae613aedadff63584f9d24f4f1dfc8a0904854864de5f465f"
+      }
+    }, {
+      "ruleId" : "e5fa9237-6c71-4bd1-847c-894f43d07d90",
+      "ruleIndex" : 15,
+      "level" : "error",
+      "message" : {
+        "text" : "Algoritmo o modo de cifrado débil (DES o ECB). Política incumplida: «Uso de algoritmos criptográficos aprobados». Acción sugerida: Reemplaza DES/ECB por AES en modo GCM (AES/GCM/NoPadding), que además ofrece cifrado autenticado. ECB no debe usarse nunca porque no oculta patrones repetidos en los datos."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/payment/CardEncryptor.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 13,
+            "snippet" : {
+              "text" : "Cipher cipher = Cipher.getInstance(\"DES/ECB/PKCS5Padding\");"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "ca7ce4db-7cd1-4dbf-a4ab-f3681cb1ec1c",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "65fdc83a-bf7b-41cb-a230-30ba34bff6af",
+        "policyName" : "Uso de algoritmos criptográficos aprobados",
+        "cweId" : "CWE-327",
+        "fileSha256" : "6a8233cf163e89c1961d44a543b94f13847573811dc83b9262cdbc282234bb79"
+      }
+    }, {
+      "ruleId" : "35f2bf6b-e9a8-4523-a6e0-14eb8c7a8f65",
+      "ruleIndex" : 14,
+      "level" : "error",
+      "message" : {
+        "text" : "Algoritmo o modo de cifrado débil (DES o ECB). Política incumplida: «Uso de algoritmos criptográficos aprobados». Acción sugerida: Reemplaza DES/ECB por AES en modo GCM (AES/GCM/NoPadding), que además ofrece cifrado autenticado. ECB no debe usarse nunca porque no oculta patrones repetidos en los datos."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/payment/CardEncryptor.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 13,
+            "snippet" : {
+              "text" : "Cipher cipher = Cipher.getInstance(\"DES/ECB/PKCS5Padding\");"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "e34a301a-6775-4f36-b612-ffbbe2615119",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "65fdc83a-bf7b-41cb-a230-30ba34bff6af",
+        "policyName" : "Uso de algoritmos criptográficos aprobados",
+        "cweId" : "CWE-327",
+        "fileSha256" : "6a8233cf163e89c1961d44a543b94f13847573811dc83b9262cdbc282234bb79"
+      }
+    }, {
+      "ruleId" : "f7d8a3fe-4bc2-41f5-b10f-b10e0d4d30f9",
+      "ruleIndex" : 10,
+      "level" : "error",
+      "message" : {
+        "text" : "Campo contraseña almacenado como texto plano sin @Convert ni cifrado. Política incumplida: «Cifrado de datos sensibles en reposo»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/user/User.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 16,
+            "snippet" : {
+              "text" : "@Column(name = \"password\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "5d1d7954-0091-4ea6-a919-90b1003b617b",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "3d6bfa38-19b6-4937-95a8-171b78fafefb",
+        "policyName" : "Cifrado de datos sensibles en reposo",
+        "cweId" : "CWE-312",
+        "fileSha256" : "fb3562203e3e7656bf3179825bdf876f427a5c387d0352a075f8e8d7abe60f5a"
+      }
+    }, {
+      "ruleId" : "3fd049c7-74d7-438a-bac7-aebe68f58ba7",
+      "ruleIndex" : 0,
+      "level" : "error",
+      "message" : {
+        "text" : "MFA obligatorio para roles privilegiados. Política incumplida: «Autenticación multifactor para roles privilegiados»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/resources/application.properties",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "bf5c8808-da27-4f9b-9291-aee200c06f2b",
+        "severity" : "CRITICAL",
+        "category" : "AUTHENTICATION_FAILURE",
+        "policyId" : "10a8f50a-7b2d-48ed-b441-42813fc70968",
+        "policyName" : "Autenticación multifactor para roles privilegiados",
+        "cweId" : "CWE-308",
+        "fileSha256" : "cd0d3f8378a10763019456d4a92a1d4c24afeeeaad2dc2656b347967f0e06b10"
+      }
+    }, {
+      "ruleId" : "3fd049c7-74d7-438a-bac7-aebe68f58ba7",
+      "ruleIndex" : 0,
+      "level" : "error",
+      "message" : {
+        "text" : "MFA obligatorio para roles privilegiados. Política incumplida: «Autenticación multifactor para roles privilegiados»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/docker-compose.yml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "66f7b837-5968-48c9-9c3d-6b3505d386f9",
+        "severity" : "CRITICAL",
+        "category" : "AUTHENTICATION_FAILURE",
+        "policyId" : "10a8f50a-7b2d-48ed-b441-42813fc70968",
+        "policyName" : "Autenticación multifactor para roles privilegiados",
+        "cweId" : "CWE-308",
+        "fileSha256" : "3d432c99e819b233c8cf4b2fb44cc71015fe72c7042581d1fa036ad6e0a89693"
+      }
+    }, {
+      "ruleId" : "5becf440-b792-419b-8eaf-9f5e02f826e6",
+      "ruleIndex" : 11,
+      "level" : "error",
+      "message" : {
+        "text" : "Secreto hardcodeado detectado en código fuente. Política incumplida: «No almacenar secretos en código fuente»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/frontend/src/api/client.js",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 3,
+            "snippet" : {
+              "text" : "const apiKey = *****;"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "2b8ee058-acaf-4c2f-a5e9-0e654e1cf7d0",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
+        "policyName" : "No almacenar secretos en código fuente",
+        "cweId" : "CWE-798",
+        "fileSha256" : "73b83abb42ee742aa2f506be329235a282a6d3a14f74a3b5af79bce3a3d1516b"
+      }
+    }, {
+      "ruleId" : "890b0744-34e4-4ba4-bb7b-65d8b7d481d1",
+      "ruleIndex" : 2,
+      "level" : "error",
+      "message" : {
+        "text" : "Hash de propósito general (MD5/SHA-1) aplicado a una contraseña. Política incumplida: «Gestión segura de credenciales de autenticación». Acción sugerida: No uses MD5/SHA-1 para contraseñas: son demasiado rápidos y vulnerables a fuerza bruta con GPU. Usa un algoritmo diseñado para contraseñas como bcrypt (passlib.hash.bcrypt) o Argon2 (argon2-cffi)."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/auth.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 10,
+            "snippet" : {
+              "text" : "return hashlib.md5(password.encode(\"utf-8\")).hexdigest()"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "db564be6-8f56-4eb9-8037-3d800a1af320",
+        "severity" : "CRITICAL",
+        "category" : "AUTHENTICATION_FAILURE",
+        "policyId" : "6bf620d7-67e6-4898-9960-8490aae6d0a0",
+        "policyName" : "Gestión segura de credenciales de autenticación",
+        "cweId" : "CWE-916",
+        "fileSha256" : "4f6988ede6f5df86c2b276085d5f80acc93405a36ed01ad039a2e491d10650d5"
+      }
+    }, {
+      "ruleId" : "4dfdcfb9-2138-41d6-8e3d-14d4e378939e",
+      "ruleIndex" : 18,
+      "level" : "error",
+      "message" : {
+        "text" : "Consulta SQL construida con f-string en vez de parámetros vinculados. Política incumplida: «Validación de entradas antes de construir consultas SQL». Acción sugerida: Usa parámetros vinculados en vez de f-strings: cursor.execute(\"SELECT * FROM users WHERE id = %s\", (user_id,)) en lugar de cursor.execute(f\"SELECT * FROM users WHERE id = {user_id}\")."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/auth.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 15,
+            "snippet" : {
+              "text" : "cursor.execute(f\"SELECT password_md5 FROM report_users WHERE username = '{username}'\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "d679d83c-462b-49b8-b8d2-471a4b0f7494",
+        "severity" : "CRITICAL",
+        "category" : "SQL_INJECTION",
+        "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
+        "policyName" : "Validación de entradas antes de construir consultas SQL",
+        "cweId" : "CWE-89",
+        "fileSha256" : "4f6988ede6f5df86c2b276085d5f80acc93405a36ed01ad039a2e491d10650d5"
+      }
+    }, {
+      "ruleId" : "4dfdcfb9-2138-41d6-8e3d-14d4e378939e",
+      "ruleIndex" : 18,
+      "level" : "error",
+      "message" : {
+        "text" : "Consulta SQL construida con f-string en vez de parámetros vinculados. Política incumplida: «Validación de entradas antes de construir consultas SQL». Acción sugerida: Usa parámetros vinculados en vez de f-strings: cursor.execute(\"SELECT * FROM users WHERE id = %s\", (user_id,)) en lugar de cursor.execute(f\"SELECT * FROM users WHERE id = {user_id}\")."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/db.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 6,
+            "snippet" : {
+              "text" : "cursor.execute(f\"SELECT * FROM orders WHERE customer_name = '{cliente}'\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "c2c098c7-42f5-4e1a-8ec2-86ad27d3ba50",
+        "severity" : "CRITICAL",
+        "category" : "SQL_INJECTION",
+        "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
+        "policyName" : "Validación de entradas antes de construir consultas SQL",
+        "cweId" : "CWE-89",
+        "fileSha256" : "a11a588ccf3cd551407541fbd8795d55d7dd130fb2c8b078e9c360e4194a7502"
+      }
+    }, {
+      "ruleId" : "4dfdcfb9-2138-41d6-8e3d-14d4e378939e",
+      "ruleIndex" : 18,
+      "level" : "error",
+      "message" : {
+        "text" : "Consulta SQL construida con f-string en vez de parámetros vinculados. Política incumplida: «Validación de entradas antes de construir consultas SQL». Acción sugerida: Usa parámetros vinculados en vez de f-strings: cursor.execute(\"SELECT * FROM users WHERE id = %s\", (user_id,)) en lugar de cursor.execute(f\"SELECT * FROM users WHERE id = {user_id}\")."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/db.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 12,
+            "snippet" : {
+              "text" : "cursor.execute(f\"SELECT id, total FROM orders WHERE created_at BETWEEN '{desde}' AND '{hasta}'\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "f52dd17f-b902-4483-9c24-61a90ef9e1ff",
+        "severity" : "CRITICAL",
+        "category" : "SQL_INJECTION",
+        "policyId" : "c64584be-0b07-49b7-8b0d-ce82aac41305",
+        "policyName" : "Validación de entradas antes de construir consultas SQL",
+        "cweId" : "CWE-89",
+        "fileSha256" : "a11a588ccf3cd551407541fbd8795d55d7dd130fb2c8b078e9c360e4194a7502"
+      }
+    }, {
+      "ruleId" : "5becf440-b792-419b-8eaf-9f5e02f826e6",
+      "ruleIndex" : 11,
+      "level" : "error",
+      "message" : {
+        "text" : "Secreto hardcodeado detectado en código fuente. Política incumplida: «No almacenar secretos en código fuente»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/settings.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 29,
+            "snippet" : {
+              "text" : "api_key = *****"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "e40fed94-542c-438f-a598-4e88ca92c2af",
+        "severity" : "CRITICAL",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "8d9396f7-50e0-4b01-b1f6-30db28aeeb06",
+        "policyName" : "No almacenar secretos en código fuente",
+        "cweId" : "CWE-798",
+        "fileSha256" : "22240dc78e61a9d1586a295d6129e3c60721bce3a14919ac44c385b06958211e"
+      }
+    }, {
+      "ruleId" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+      "ruleIndex" : 6,
+      "level" : "error",
+      "message" : {
+        "text" : "Dependencias con CVEs conocidos de alta severidad. Política incumplida: «Escaneo de dependencias en CI/CD»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/pom.xml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "5fecb9f9-8264-45a0-9b4d-f64c96cdae1d",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+        "policyName" : "Escaneo de dependencias en CI/CD",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "1dca6cc9d1c824c170fd3c7e7e2d65540712475a65bc5108825eee6137209bc1"
+      }
+    }, {
+      "ruleId" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+      "ruleIndex" : 6,
+      "level" : "error",
+      "message" : {
+        "text" : "Dependencias con CVEs conocidos de alta severidad. Política incumplida: «Escaneo de dependencias en CI/CD»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/pom.xml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "f767437c-a658-4dcb-8d4e-35c6fde35a52",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+        "policyName" : "Escaneo de dependencias en CI/CD",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "1dca6cc9d1c824c170fd3c7e7e2d65540712475a65bc5108825eee6137209bc1"
+      }
+    }, {
+      "ruleId" : "f9c3bb14-c1bd-45f6-9cae-34ea14f6ccd5",
+      "ruleIndex" : 1,
+      "level" : "error",
+      "message" : {
+        "text" : "Endpoint de login sin protección de rate limiting visible. Política incumplida: «Bloqueo de cuenta tras intentos fallidos»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/AuthController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 26,
+            "snippet" : {
+              "text" : "@PostMapping(\"/login\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "ae775c32-5c68-4a41-a47b-883ae3871120",
+        "severity" : "HIGH",
+        "category" : "AUTHENTICATION_FAILURE",
+        "policyId" : "93a672c0-e2e3-4680-869e-35f35af9c3d4",
+        "policyName" : "Bloqueo de cuenta tras intentos fallidos",
+        "cweId" : "CWE-307",
+        "fileSha256" : "53e3a5a4c414d5e653fe5d0c79dc74358780ce260dc46e99efa1c14a818bb1e5"
+      }
+    }, {
+      "ruleId" : "6c843dc0-9e16-43e1-9830-4093b1df2b8d",
+      "ruleIndex" : 12,
+      "level" : "error",
+      "message" : {
+        "text" : "Datos sensibles registrados en logs. Política incumplida: «Registro seguro sin datos sensibles»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/AuthController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 30,
+            "snippet" : {
+              "text" : "log.info(\"Intento de inicio de sesion usuario={} password=*****, username, password);"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "d6e96e7f-3d64-4342-bbc6-26b6cae4d7b2",
+        "severity" : "HIGH",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "3cfcf2fe-649f-4063-adb9-4285ee4ab13d",
+        "policyName" : "Registro seguro sin datos sensibles",
+        "cweId" : "CWE-532",
+        "fileSha256" : "53e3a5a4c414d5e653fe5d0c79dc74358780ce260dc46e99efa1c14a818bb1e5"
+      }
+    }, {
+      "ruleId" : "2aae5e3e-8caa-426e-a9ad-d60c822357f4",
+      "ruleIndex" : 3,
+      "level" : "error",
+      "message" : {
+        "text" : "Validación de contraseña con longitud menor a 12 caracteres. Política incumplida: «Política de contraseñas seguras»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/auth/AuthController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 44,
+            "snippet" : {
+              "text" : "if (!password.matches(\".{6,}\")) {"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "fe5ff2f4-8ccc-4d74-97d3-654e220d1cad",
+        "severity" : "HIGH",
+        "category" : "AUTHENTICATION_FAILURE",
+        "policyId" : "3cd30237-f515-48a0-9cdd-ed8db16b6cdc",
+        "policyName" : "Política de contraseñas seguras",
+        "cweId" : "CWE-521",
+        "fileSha256" : "53e3a5a4c414d5e653fe5d0c79dc74358780ce260dc46e99efa1c14a818bb1e5"
+      }
+    }, {
+      "ruleId" : "41109721-0f80-4b6c-ba18-9990352fc0ab",
+      "ruleIndex" : 19,
+      "level" : "error",
+      "message" : {
+        "text" : "Parámetro HTTP usado directamente en query sin validar. Política incumplida: «Validación de entradas en capa de acceso a datos»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/order/OrderController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 25,
+            "snippet" : {
+              "text" : "return new OrderSearch(request.getParameter(\"filtro\")).query(jdbcTemplate);"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "5f2c2882-4bd4-46aa-8762-91f75880cf8f",
+        "severity" : "HIGH",
+        "category" : "SQL_INJECTION",
+        "policyId" : "e88bc42f-ad29-4df4-af91-262439409975",
+        "policyName" : "Validación de entradas en capa de acceso a datos",
+        "cweId" : "CWE-20",
+        "fileSha256" : "cca514d1a4462744e2f5f2853c5ca010e7cbb18cc2243ffc1fa3e2711e1bdccf"
+      }
+    }, {
+      "ruleId" : "fa8e1857-f65b-4e7f-88f1-a02235ce7ed8",
+      "ruleIndex" : 9,
+      "level" : "error",
+      "message" : {
+        "text" : "Verificacion de checksum de artefactos ausente. Política incumplida: «Verificación de integridad de artefactos»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/resources/application.properties",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "42a2b97d-56d9-4044-94b5-ca571122115f",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "a6526797-247f-4fe3-85df-8a87828fd74e",
+        "policyName" : "Verificación de integridad de artefactos",
+        "cweId" : "CWE-494",
+        "fileSha256" : "cd0d3f8378a10763019456d4a92a1d4c24afeeeaad2dc2656b347967f0e06b10"
+      }
+    }, {
+      "ruleId" : "ff701ffd-e418-4ff5-8d3a-e55c0633a649",
+      "ruleIndex" : 13,
+      "level" : "error",
+      "message" : {
+        "text" : "TLS debe estar habilitado en produccion. Política incumplida: «Transmisión cifrada con TLS 1.2+»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/resources/application.properties",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "24171d5e-7436-44d3-8de4-6ee699beda21",
+        "severity" : "HIGH",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "14de94c7-b91b-45f4-92d4-460196e73648",
+        "policyName" : "Transmisión cifrada con TLS 1.2+",
+        "cweId" : "CWE-319",
+        "fileSha256" : "cd0d3f8378a10763019456d4a92a1d4c24afeeeaad2dc2656b347967f0e06b10"
+      }
+    }, {
+      "ruleId" : "fa8e1857-f65b-4e7f-88f1-a02235ce7ed8",
+      "ruleIndex" : 9,
+      "level" : "error",
+      "message" : {
+        "text" : "Verificacion de checksum de artefactos ausente. Política incumplida: «Verificación de integridad de artefactos»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/docker-compose.yml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "a9f866ae-4b75-4aa5-afe0-704bbe1de72b",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "a6526797-247f-4fe3-85df-8a87828fd74e",
+        "policyName" : "Verificación de integridad de artefactos",
+        "cweId" : "CWE-494",
+        "fileSha256" : "3d432c99e819b233c8cf4b2fb44cc71015fe72c7042581d1fa036ad6e0a89693"
+      }
+    }, {
+      "ruleId" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+      "ruleIndex" : 6,
+      "level" : "error",
+      "message" : {
+        "text" : "Dependencias con CVEs conocidos de alta severidad. Política incumplida: «Escaneo de dependencias en CI/CD»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/frontend/package.json",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "c25b101d-1097-45fe-854e-ab3fe50d2f43",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+        "policyName" : "Escaneo de dependencias en CI/CD",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "4718da5047c2ea30b53eb06c1d5ec73dcebf332007437007fa745c2df1ec34a4"
+      }
+    }, {
+      "ruleId" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+      "ruleIndex" : 6,
+      "level" : "error",
+      "message" : {
+        "text" : "Dependencias con CVEs conocidos de alta severidad. Política incumplida: «Escaneo de dependencias en CI/CD»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/frontend/package.json",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "c9d306cc-1482-4924-b28f-fdf0530c5aef",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+        "policyName" : "Escaneo de dependencias en CI/CD",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "4718da5047c2ea30b53eb06c1d5ec73dcebf332007437007fa745c2df1ec34a4"
+      }
+    }, {
+      "ruleId" : "920c26d2-bb35-405f-8fc3-40d6fa4c3e17",
+      "ruleIndex" : 22,
+      "level" : "error",
+      "message" : {
+        "text" : "Renderizado HTML sin sanitización explícita. Política incumplida: «Sanitización de contenido generado por usuarios»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/frontend/src/components/ProductReview.jsx",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 7,
+            "snippet" : {
+              "text" : "<div dangerouslySetInnerHTML={{ __html: review.comment }} />"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "c4c38161-ebb0-4c3e-bd02-566f595315e5",
+        "severity" : "HIGH",
+        "category" : "XSS",
+        "policyId" : "97461bf8-5cde-46f4-bda8-ae1a8d5af276",
+        "policyName" : "Sanitización de contenido generado por usuarios",
+        "cweId" : "CWE-79",
+        "fileSha256" : "612c5d86b44bd0680ede6c17fe954dd4ed428da468a6b94d9eea0f7ca184024a"
+      }
+    }, {
+      "ruleId" : "0e7ae2b7-5549-4dbf-a0ca-7d4a092d3e9d",
+      "ruleIndex" : 20,
+      "level" : "error",
+      "message" : {
+        "text" : "Asignación directa a innerHTML sin escape. Política incumplida: «Codificación de salida HTML»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/frontend/src/utils/notifications.js",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 3,
+            "snippet" : {
+              "text" : "banner.innerHTML = message;"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "3b1b0125-fd48-4270-9c65-09c50e529a85",
+        "severity" : "HIGH",
+        "category" : "XSS",
+        "policyId" : "a0ce20f9-4826-4b15-be53-4292ee1d148c",
+        "policyName" : "Codificación de salida HTML",
+        "cweId" : "CWE-79",
+        "fileSha256" : "1e712897c72ad8491718b9f312d5c4c767bda98e2d7c5c43e9a20d783d36b9fd"
+      }
+    }, {
+      "ruleId" : "0e7ae2b7-5549-4dbf-a0ca-7d4a092d3e9d",
+      "ruleIndex" : 20,
+      "level" : "error",
+      "message" : {
+        "text" : "Asignación directa a innerHTML sin escape. Política incumplida: «Codificación de salida HTML»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/frontend/src/utils/notifications.js",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 10,
+            "snippet" : {
+              "text" : "results.innerHTML = params.get(\"q\");"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "be4bbc80-d333-414b-ad4f-1de5f877911b",
+        "severity" : "HIGH",
+        "category" : "XSS",
+        "policyId" : "a0ce20f9-4826-4b15-be53-4292ee1d148c",
+        "policyName" : "Codificación de salida HTML",
+        "cweId" : "CWE-79",
+        "fileSha256" : "1e712897c72ad8491718b9f312d5c4c767bda98e2d7c5c43e9a20d783d36b9fd"
+      }
+    }, {
+      "ruleId" : "6c843dc0-9e16-43e1-9830-4093b1df2b8d",
+      "ruleIndex" : 12,
+      "level" : "error",
+      "message" : {
+        "text" : "Datos sensibles registrados en logs. Política incumplida: «Registro seguro sin datos sensibles»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/auth.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 21,
+            "snippet" : {
+              "text" : "logger.info(\"Validando sesion de reportes con token=*****, token)"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "d42d1954-7dd8-41da-b420-6524fdec1a91",
+        "severity" : "HIGH",
+        "category" : "INSECURE_DATA_HANDLING",
+        "policyId" : "3cfcf2fe-649f-4063-adb9-4285ee4ab13d",
+        "policyName" : "Registro seguro sin datos sensibles",
+        "cweId" : "CWE-532",
+        "fileSha256" : "4f6988ede6f5df86c2b276085d5f80acc93405a36ed01ad039a2e491d10650d5"
+      }
+    }, {
+      "ruleId" : "7ea6e380-71c5-4353-ba73-ab1b1c78b7ff",
+      "ruleIndex" : 23,
+      "level" : "error",
+      "message" : {
+        "text" : "Contenido marcado como seguro (mark_safe) sin sanitización previa visible. Política incumplida: «Validación de entradas antes de renderizar contenido dinámico». Acción sugerida: Evita mark_safe() con contenido que incluya datos de usuario -- Django ya escapa automáticamente por defecto. Si necesitas HTML dinámico, sanea el contenido con bleach.clean(...) antes de marcarlo como seguro."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/views.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 14,
+            "snippet" : {
+              "text" : "titulo = mark_safe(f\"<h1>Reporte de ventas de {cliente}</h1>\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "c2b46a12-9c1b-44db-be13-f141c23bdf42",
+        "severity" : "HIGH",
+        "category" : "XSS",
+        "policyId" : "9c235b88-1b55-422e-8dcf-8788607c7b85",
+        "policyName" : "Validación de entradas antes de renderizar contenido dinámico",
+        "cweId" : "CWE-79",
+        "fileSha256" : "13e432a77fd4dc9975f4b00a34c909e5dc2c99a312087ded29795ba521231d6d"
+      }
+    }, {
+      "ruleId" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+      "ruleIndex" : 6,
+      "level" : "error",
+      "message" : {
+        "text" : "Dependencias con CVEs conocidos de alta severidad. Política incumplida: «Escaneo de dependencias en CI/CD»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/requirements.txt",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "4c0a6578-65ac-48b0-8487-140fc3f21bcf",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+        "policyName" : "Escaneo de dependencias en CI/CD",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "66419688c95a9617acffd71421a0e6eb57c20fb55489b44ba72aa2528da5279b"
+      }
+    }, {
+      "ruleId" : "a2797146-4d45-4f56-8fb1-47644a2b8c5a",
+      "ruleIndex" : 6,
+      "level" : "error",
+      "message" : {
+        "text" : "Dependencias con CVEs conocidos de alta severidad. Política incumplida: «Escaneo de dependencias en CI/CD»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/requirements.txt",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "6e053b8e-e8bb-4ac1-8f80-2198902b485e",
+        "severity" : "HIGH",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "b1468506-7c8b-4bbc-9a0f-8d3fda7cc2f2",
+        "policyName" : "Escaneo de dependencias en CI/CD",
+        "cweId" : "CWE-1035",
+        "fileSha256" : "66419688c95a9617acffd71421a0e6eb57c20fb55489b44ba72aa2528da5279b"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-intermedio/backend/src/main/java/co/tienda/order/OrderController.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 27,
+            "snippet" : {
+              "text" : "\"SELECT * FROM orders WHERE customer_username = ? AND status = ? ORDER BY created_at DESC\","
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "590cec5e-400c-4f64-8b2a-7e240e87bb99",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "ca85edd0fbc19e6deb55e0bec7294e8222ae6367214c59012ae1241d15bd31a3"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-intermedio/backend/src/main/java/co/tienda/user/UserRepository.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 19,
+            "snippet" : {
+              "text" : "\"SELECT * FROM users WHERE username = ?\","
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "1313e0af-37d7-4c63-bde9-4591c7d453fc",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "287e4d32af162c82860908780c4513e378c94a33333af32389bf02499ca193d2"
+      }
+    }, {
+      "ruleId" : "7a8b57c4-b66e-4e06-b644-12362d6ebc77",
+      "ruleIndex" : 21,
+      "level" : "warning",
+      "message" : {
+        "text" : "Cabecera Content-Security-Policy no configurada. Política incumplida: «Content Security Policy obligatoria»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-intermedio/backend/src/main/resources/application.yml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "ae011d5a-8152-4b63-ac67-7f2aff78b343",
+        "severity" : "MEDIUM",
+        "category" : "XSS",
+        "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
+        "policyName" : "Content Security Policy obligatoria",
+        "cweId" : "CWE-693",
+        "fileSha256" : "62338a0b057d596d003abc9fd7121adc85ab15de154558f2abdd7569c43bb5b1"
+      }
+    }, {
+      "ruleId" : "2aff573a-12d9-49a2-b26a-a96e7ced8bf4",
+      "ruleIndex" : 5,
+      "level" : "warning",
+      "message" : {
+        "text" : "Politica de actualizacion de dependencias ausente. Política incumplida: «Actualización periódica de dependencias»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-intermedio/backend/src/main/resources/application.yml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "4b3ae32d-9de5-43d7-9ab0-daa3ca8231ea",
+        "severity" : "MEDIUM",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
+        "policyName" : "Actualización periódica de dependencias",
+        "cweId" : "CWE-1104",
+        "fileSha256" : "62338a0b057d596d003abc9fd7121adc85ab15de154558f2abdd7569c43bb5b1"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-intermedio/reportes/reportes/db.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 6,
+            "snippet" : {
+              "text" : "cursor.execute(\"SELECT * FROM orders WHERE customer_name = %s\", [cliente])"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "cafd5886-22dd-4edf-99c9-7fb851d163bc",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "7daeb4a4e3d7042d3e2018e0b08d3cc606a3309d955db3d60e00c8db167f529d"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/order/OrderSearch.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 17,
+            "snippet" : {
+              "text" : "String sql = \"SELECT * FROM orders WHERE \" + filtro + \" ORDER BY created_at DESC\";"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "09fe3a15-6a74-4f13-b5f0-5c4a9356b6dc",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "c9a88fa39aae10169671941e08b7304e27dbca45f2d0ac4be7d375d6c57b1f43"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/java/co/tiendavuln/user/UserRepository.java",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 18,
+            "snippet" : {
+              "text" : "String sql = \"SELECT * FROM users WHERE username = '\" + username + \"'\";"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "20dd34f0-aef6-48fd-ad68-f93874596b3b",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "f645e61c987a7d763d3367192836335ad725a52826905fc2e0d0c1d44bd08f67"
+      }
+    }, {
+      "ruleId" : "7a8b57c4-b66e-4e06-b644-12362d6ebc77",
+      "ruleIndex" : 21,
+      "level" : "warning",
+      "message" : {
+        "text" : "Cabecera Content-Security-Policy no configurada. Política incumplida: «Content Security Policy obligatoria»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/resources/application.properties",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "345c91b1-c15f-464c-ad6a-4df654def0c4",
+        "severity" : "MEDIUM",
+        "category" : "XSS",
+        "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
+        "policyName" : "Content Security Policy obligatoria",
+        "cweId" : "CWE-693",
+        "fileSha256" : "cd0d3f8378a10763019456d4a92a1d4c24afeeeaad2dc2656b347967f0e06b10"
+      }
+    }, {
+      "ruleId" : "2aff573a-12d9-49a2-b26a-a96e7ced8bf4",
+      "ruleIndex" : 5,
+      "level" : "warning",
+      "message" : {
+        "text" : "Politica de actualizacion de dependencias ausente. Política incumplida: «Actualización periódica de dependencias»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/backend/src/main/resources/application.properties",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "0a3cd6f5-4235-4274-bc42-8997325960ba",
+        "severity" : "MEDIUM",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
+        "policyName" : "Actualización periódica de dependencias",
+        "cweId" : "CWE-1104",
+        "fileSha256" : "cd0d3f8378a10763019456d4a92a1d4c24afeeeaad2dc2656b347967f0e06b10"
+      }
+    }, {
+      "ruleId" : "7a8b57c4-b66e-4e06-b644-12362d6ebc77",
+      "ruleIndex" : 21,
+      "level" : "warning",
+      "message" : {
+        "text" : "Cabecera Content-Security-Policy no configurada. Política incumplida: «Content Security Policy obligatoria»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/docker-compose.yml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "7cfc9c9f-bec1-440d-aba7-fa0c760d5e10",
+        "severity" : "MEDIUM",
+        "category" : "XSS",
+        "policyId" : "72be336b-acb6-4dee-9923-56cf68693874",
+        "policyName" : "Content Security Policy obligatoria",
+        "cweId" : "CWE-693",
+        "fileSha256" : "3d432c99e819b233c8cf4b2fb44cc71015fe72c7042581d1fa036ad6e0a89693"
+      }
+    }, {
+      "ruleId" : "2aff573a-12d9-49a2-b26a-a96e7ced8bf4",
+      "ruleIndex" : 5,
+      "level" : "warning",
+      "message" : {
+        "text" : "Politica de actualizacion de dependencias ausente. Política incumplida: «Actualización periódica de dependencias»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/docker-compose.yml",
+            "uriBaseId" : "%SRCROOT%"
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "96308b78-577e-41b4-898e-48100d095c34",
+        "severity" : "MEDIUM",
+        "category" : "DEPENDENCY_VULNERABILITY",
+        "policyId" : "562d421f-c607-42ee-b21c-64a07487c8dc",
+        "policyName" : "Actualización periódica de dependencias",
+        "cweId" : "CWE-1104",
+        "fileSha256" : "3d432c99e819b233c8cf4b2fb44cc71015fe72c7042581d1fa036ad6e0a89693"
+      }
+    }, {
+      "ruleId" : "2cffa602-f413-4112-b0c2-ff7f26573adc",
+      "ruleIndex" : 16,
+      "level" : "warning",
+      "message" : {
+        "text" : "Consulta SELECT * sin filtro de columnas sensibles. Política incumplida: «Control de acceso a datos por rol»."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "proyecto-vulnerable/reportes/reportes/db.py",
+            "uriBaseId" : "%SRCROOT%"
+          },
+          "region" : {
+            "startLine" : 6,
+            "snippet" : {
+              "text" : "cursor.execute(f\"SELECT * FROM orders WHERE customer_name = '{cliente}'\")"
+            }
+          }
+        }
+      } ],
+      "properties" : {
+        "findingId" : "9488d846-95fe-4af4-89f6-bed1a348cd12",
+        "severity" : "MEDIUM",
+        "category" : "SQL_INJECTION",
+        "policyId" : "00efc4ac-63ec-4d2e-9001-2b38eb7eecb7",
+        "policyName" : "Control de acceso a datos por rol",
+        "cweId" : "CWE-89",
+        "fileSha256" : "a11a588ccf3cd551407541fbd8795d55d7dd130fb2c8b078e9c360e4194a7502"
+      }
+    } ],
+    "properties" : {
+      "reportId" : "acaf454c-2287-4b5c-84a2-a2e076a9ae8b",
+      "reportStatus" : "GENERATED",
+      "reportChecksum" : "b242f4da0286725a6b00e27fa5a7d69c964e719b92ae4f1bc80d45d78579fda7",
+      "reportGeneratedAt" : "2026-10-04T22:50:21.578Z",
+      "analysisId" : "d03831e5-dd5f-4ca2-a339-5b5d2e4de9a0",
+      "repositoryName" : "repo.zip",
+      "compliancePercentage" : 8.70,
+      "weightedCompliancePercentage" : 8.85,
+      "policiesEvaluated" : 23,
+      "totalFindings" : 47
+    }
+  } ]
+}
